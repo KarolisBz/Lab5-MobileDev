@@ -1,0 +1,14 @@
+<h1>Students</h1>
+
+<ul>
+  <li *ngFor="let item of students">
+    {{item.name}}, {{item.address}}, {{item.course}}
+  </li>
+</ul>
+
+<h1>Weather in galway</h1>
+<ul>
+  <li *ngFor="let item of galwayWeather">
+    {{item.main}}, {{item.description}}
+  </li>
+</ul>
