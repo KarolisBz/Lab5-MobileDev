@@ -14,6 +14,7 @@ import { CommonModule } from '@angular/common';
 export class AppComponent implements OnInit {
   students:any = [];
   galwayWeather:any = [];
+  temp:String = "";
 
   constructor(private studentService:StudentServiceService, private WeatherService:WeatherService){
 
@@ -29,6 +30,7 @@ export class AppComponent implements OnInit {
     this.WeatherService.GetWeatherData().subscribe(
       (data) => {
         this.galwayWeather = data.weather;
+        this.temp = data.main.temp
       }
     );
   }
