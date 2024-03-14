@@ -12,3 +12,12 @@
     {{item.main}}, {{item.description}}, Temp:{{temp}}
   </li>
 </ul>
+
+<!-- enter which place weather you want to outout-->
+<h1>Enter location for its weather info:</h1>
+<input [(ngModel)]="locationSelected" onblur="onInputFocused()">
+<ul>
+  <li *ngFor="let item of selectedWeather">
+    {{item.main}}, {{item.description}}, Temp:{{selectedTemp}}
+  </li>
+</ul>
